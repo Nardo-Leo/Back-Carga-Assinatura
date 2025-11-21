@@ -1,0 +1,25 @@
+const express = require('express');
+const app = express();
+
+// Supondo que você tenha um banco de dados de usuários
+const usuarios = [
+  { id: 1, nome: 'João' },
+  { id: 2, nome: 'Maria' },
+  { id: 3, nome: 'Pedro' },
+];
+
+// Rota para pegar usuário pelo ID
+app.get('/api/usuarios/:id', (req, res) => {
+  const id = parseInt(req.params.id); // Pega o ID da URL
+  const usuario = usuarios.find(u => u.id === id);
+
+  if (usuario) {
+    res.json(usuario);
+  } else {
+    res.status(404).json({ erro: 'Usuário não encontrado' });
+  }
+});
+
+app.listen(3000, () => {
+  console.log('API rodando na porta 3000');
+});

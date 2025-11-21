@@ -1,0 +1,39 @@
+
+/*
+var sql = require("mssql");
+
+// Configurações do seu banco de dados
+var config = {
+    user: 'sa',
+    password: 'Glass204060*',
+    server: '192.168.1.118', // ou o endereço do seu servidor
+    database: 'TESTESBUSCA',
+
+    options: {
+encrypt: false,
+trustServerCertificate: true,
+}
+};
+
+// Conecta ao banco de dados
+sql.connect(config, function (err) {
+    if (err) {
+        console.log('deu erro aqui: ' + err);
+        return;
+    }
+
+    // Cria um objeto de requisição
+    var request = new sql.Request();
+
+    // Executa uma consulta
+    request.query('select * from viagem', function (err, recordset) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        // Retorna os registros do banco de dados
+        console.log(recordset);
+    });
+});
+
+*/
